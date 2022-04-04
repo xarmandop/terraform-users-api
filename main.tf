@@ -1,10 +1,9 @@
 provider "aws" {
   region = "us-east-1"
-  access_key = "AKIA6LSMM6BRDERA2QCR"
-  secret_key = "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"
+  
 }
 
-
+#simple wat to define a var in tf
 variable "subnect_cidr_block" {
   description = "subent cidr block"
   value = "10.0.10.0/24"
@@ -18,11 +17,10 @@ resource "aws_vpc" "altm-vpc" {
 }
 
 #each subnet inside a VPC has to have a different set of IP address
-resource "aws_subnet" "altm-subnet" {
+resource "aws_subnet" "altm-subnet" { 
   tags = {
     Name = "altm-subnet"
   }
-  #referencing sn other resource
   vpc_id = aws_vpc.altm-vpc.id
   cidr_block = var.subnect_cidr_block.value
   availability_zone = "us-east-1a"
