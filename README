@@ -1,2 +1,26 @@
 
-#AWS ENV VARIABLES
+# AWS CREDENTIALS
+#   Avoid to hardcode AWS credentials, instead use environment variables.
+#   Terraform will be able to pick it up: 
+
+#     export AWS_ENV_NAME=xxxxxxxx
+
+#     Locally set secret and access key to connect with AWS. Set AWS CLI for these credentials. 
+
+# #VARIABLES
+#     Terraform will search by default into "terraform.tfvar" file first. 
+#     To use a specific  .tfvars file use the follos command with "apply" -var-file [file-name-env].tfvars
+#     example: "terraform apply -var-file terraform-dev.tfvars"
+
+#     Create a terraform-dev.tfvar file to set the neccesary variables, e.g. 
+
+# #ENVIRONMENTS PREFIX
+#     - app-name-dev
+#     - app-name-staging
+#     - app-name-prod
+
+
+# #REMBER SOME TERRAFORM USEFUL COMMANDS
+#     -auto-approve: avoid approving, typing yes
+#     -apply: apply changes to a current state
+#     plan: get a preview of the changes 
