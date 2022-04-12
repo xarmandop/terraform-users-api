@@ -8,6 +8,10 @@
 #     Locally set secret and access key to connect with AWS. Set AWS CLI for these credentials. 
 
 # #VARIABLES
+
+# - Copy terraform.tfvars vars names an create new file, name it as terraform-dev.tfvars,
+#    and set your own local values.  
+
 #     Terraform will search by default into "terraform.tfvar" file first. 
 #     To use a specific  .tfvars file use the follos command with "apply" -var-file [file-name-env].tfvars
 #     example: "terraform apply -var-file terraform-dev.tfvars"
@@ -23,4 +27,9 @@
 # #REMBER SOME TERRAFORM USEFUL COMMANDS
 #     -auto-approve: avoid approving, typing yes
 #     -apply: apply changes to a current state
-#     plan: get a preview of the changes 
+#     plan: get a preview of the changes
+
+
+#DO NOT PUSH terraform.tfvars file with your values, keep empty
+# only use as refrence to create another file witjh same variables name.
+
